@@ -221,6 +221,7 @@ GEM
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
     ffi (1.15.5)
+    ffi (1.15.5-x64-mingw-ucrt)
     globalid (1.0.0)
       activesupport (>= 5.0)
     hashie (5.0.0)
@@ -280,6 +281,8 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.8)
+    nokogiri (1.13.10-x64-mingw-ucrt)
+      racc (~> 1.4)
     nokogiri (1.13.10-x86_64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -370,6 +373,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    sqlite3 (1.5.4-x64-mingw-ucrt)
     sqlite3 (1.5.4-x86_64-darwin)
     sys-uname (1.2.2)
       ffi (~> 1.1)
@@ -400,6 +404,7 @@ GEM
     zeitwerk (2.6.6)
 
 PLATFORMS
+  x64-mingw-ucrt
   x86_64-darwin-20
 
 DEPENDENCIES
