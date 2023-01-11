@@ -19,20 +19,29 @@ To run an existing Ruby on Rails project on your computer, you will need to inst
     gem install bundler
     ```
 
-3. Install the project dependencies: Once you have Ruby and `bundler` installed, navigate to the root directory of the project and run the following command to install the required gems:
+3. Install NodeJs with npm from the official website (https://nodejs.org/en/)
+
+4. Install `yarn` by running the following command
+    ```
+    npm i -g corepack
+    ```
+
+5. Install the project dependencies: Once you have Ruby and `bundler` installed, navigate to the root directory of the project and run the following command to install the required gems:
     ```
     bundle install
     ```
 
-4. Set up the database: If the project uses a database, you will need to create the necessary database and run the database migrations to set up the schema. You can do this by running the following commands:
+6. Set up the database: If the project uses a database, you will need to create the necessary database and run the database migrations to set up the schema. You can do this by running the following commands:
     ```
     rails db:create
     rails db:migrate
     ```
 
-5. Run the application: Once everything is set up, you can start the Rails server and access the application by running the following command:
+7. Run the application: Once everything is set up, you can start the Rails server and access the application by running the following commands in seperate terminals:
     ```
     rails server
+    yarn build --watch
+    yarn build:css --watch
     ```
 
 This will start the Rails server and make the application available at `http://localhost:3000`. You can then open a web browser and visit this URL to access the application.
