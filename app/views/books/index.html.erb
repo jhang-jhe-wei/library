@@ -7,11 +7,11 @@
   <%= submit_tag("Search") %>
 <% end %>
 
-<div id="books">
+<div id="books" class ="inarow" >
   <% @books.each do |book| %>
     <%= render book %>
     <p>
-      <%= link_to "Show this book", book %>
+    <%= link_to "Show this book", book %>
     </p>
   <% end %>
 </div>
