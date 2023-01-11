@@ -2,7 +2,7 @@
   <nav>
     <ul class = "nav_links">
       <%= link_to 'All Books', books_path, class: 'mr-4' %>
-      <%= link_to 'Book Borrow Records', borrower_records_path %>
+  <%= link_to 'Book Borrow Records', borrower_records_path %>
     </ul>
   </nav>
   <ul class="flex">
@@ -12,6 +12,10 @@
       </li>
       <li>
         <%= link_to "Sign Up", new_user_registration_path %>
+      </li>
+    <% else %>
+      <li>
+        <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
       </li>
     <% end %>
   </ul>
