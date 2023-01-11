@@ -1,13 +1,18 @@
-<div id="<%= dom_id borrower_record %>">
-  <p>
-    <strong>Book:</strong>
-    <%= borrower_record.book.title %>
-  </p>
-
-  <p>
-    <strong>Borrowed at:</strong>
-    <%= borrower_record.created_at %>
-  </p>
-
-  <%= link_to('return', borrower_record_return_path(borrower_record.id)) %>
+<% book = borrower_record.book %>
+<div id="<%= dom_id borrower_record %>" class="books">
+  <img src="<%= book.picture_url %>" alt="<%= book.title %>">
+  <div class="Titles">
+    <h4 > <%= book.title %> </h4>
+    <p >Author : <%= book.author %></p>
+    <p >Year : <%= book.year %> </p>
+    <p >Edition : <%= book.edition %> </p>
+    <p >Publisher :  <%= book.publisher %></p>
+    <p >Avaible : <%= book.quantity %> </p>
+    <p >Rating : <%= book.rate || '-' %>/5 </p>
+    <%= link_to(borrower_record_return_path(borrower_record.id), class: "inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300" ) do %>
+      Return
+      <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    <% end %>
+  </div>
 </div>
+

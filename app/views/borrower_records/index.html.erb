@@ -1,7 +1,10 @@
 <%= render 'layouts/nav' %>
 
-<div id="borrower_records">
-  <% @borrower_records.each do |borrower_record| %>
-    <%= render borrower_record %>
-  <% end %>
+<div class ="container mx-auto" >
+  <div id="borrower_records" class ="grid grid-cols-3" >
+
+    <% @borrower_records.each do |borrower_record| %>
+      <%= render borrower_record %>
+<% end %>
+  </div>
 </div>
