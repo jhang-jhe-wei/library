@@ -1,9 +1,11 @@
-<p style="color: green"><%= notice %></p>
+<%= render 'layouts/nav' %>
+<%= render 'layouts/errors' %>
 
-<h1>Borrower Records</h1>
+<div class ="container mx-auto" >
+  <div id="borrower_records" class ="grid grid-cols-3" >
 
-<div id="borrower_records">
-  <% @borrower_records.each do |borrower_record| %>
-    <%= render borrower_record %>
-  <% end %>
+    <% @borrower_records.each do |borrower_record| %>
+      <%= render borrower_record %>
+<% end %>
+  </div>
 </div>

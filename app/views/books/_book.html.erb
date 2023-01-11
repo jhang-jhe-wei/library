@@ -1,38 +1,18 @@
-<div id="<%= dom_id book %>">
-  <p>
-    <strong>Title:</strong>
-    <%= book.title %>
-  </p>
-
-  <p>
-    <strong>Author:</strong>
-    <%= book.author %>
-  </p>
-
-  <p>
-    <strong>Year:</strong>
-    <%= book.year %>
-  </p>
-
-  <p>
-    <strong>Edition:</strong>
-    <%= book.edition %>
-  </p>
-
-  <p>
-    <strong>Publisher:</strong>
-    <%= book.publisher %>
-  </p>
-
-  <p>
-    <strong>Quntity:</strong>
-    <%= book.quantity %>
-  </p>
-
-  <p>
-    <strong>Rate:</strong>
-    <%= book.rate || '-' %>
-  </p>
-
-  <%= button_to('borrow', book_borrower_records_path(book.id), method: :post) %>
+<div id="<%= dom_id book %>" class="books">
+  <img src="<%= book.picture_url %>" alt="<%= book.title %>">
+  <div class="flex flex-col justify-between ml-2 Titles">
+    <div>
+      <h4 > <%= book.title %> </h4>
+      <p >Author : <%= book.author %></p>
+      <p >Year : <%= book.year %> </p>
+      <p >Edition : <%= book.edition %> </p>
+      <p >Publisher :  <%= book.publisher %></p>
+      <p >Avaible : <%= book.quantity %> </p>
+      <p >Rating : <%= book.rate || '-' %>/5 </p>
+    </div>
+    <%= button_to(book_borrower_records_path(book.id), method: :post, class: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-2') do %>
+      Borrow
+      <svg aria-hidden="true" class="inline w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    <% end %>
+  </div>
 </div>
